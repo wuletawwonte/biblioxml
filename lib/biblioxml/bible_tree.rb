@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'testament_node'
-
 module Biblioxml
   class BibleTree
     attr_reader :testaments
@@ -11,7 +9,11 @@ module Biblioxml
       @translation = translation
       @status = status
       @link = link
-      @testaments = [Biblioxml::TestamentNode.new(name: "old"), Biblioxml::TestamentNode.new(name: "new")]
+      @testaments = []
+    end
+
+    def add_testament(testament)
+      @testaments << testament
     end
 
     def new_testament

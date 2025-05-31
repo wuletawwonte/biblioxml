@@ -2,6 +2,11 @@
 
 require_relative "biblioxml/version"
 require_relative "biblioxml/parser"
+require_relative "biblioxml/bible_tree"
+require_relative "biblioxml/testament_node"
+require_relative "biblioxml/book_node"
+require_relative "biblioxml/chapter_node"
+require_relative "biblioxml/verse_node"
 
 module Biblioxml
   class Error < StandardError; end

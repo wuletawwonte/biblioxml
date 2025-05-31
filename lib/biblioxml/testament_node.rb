@@ -7,8 +7,8 @@ module Biblioxml
     attr_reader :books
     attr_accessor :name
 
-    def initialize(name: "new")
-      @name = name
+    def initialize(name:)
+      @name = TESTAMENTS.include?(name) ? name : "new"
       @books = []
     end
 
