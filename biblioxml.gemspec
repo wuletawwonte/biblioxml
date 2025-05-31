@@ -31,4 +31,5 @@ Gem::Specification.new do |spec|
 
   # Uncomment to register a new dependency of your gem
   spec.add_dependency "nokogiri", "~> 1.18"
+  spec.add_dependency "zeitwerk", "~> 2.7"
 end
