@@ -1,19 +1,11 @@
 # frozen_string_literal: true
 
-require "nokogiri"
-require_relative "bible_tree"
-require_relative "testament_node"
-require_relative "book_node"
-require_relative "chapter_node"
-require_relative "verse_node"
-
 module Biblioxml
   class Parser
     def self.read(file_path)
       doc = Nokogiri::XML(File.read(file_path))
 
-      bible_tree = Biblioxml::BibleTree.new(translation: doc.root["translation"], status: doc.root["status"],
-                                            link: doc.root["link"])
+      bible_tree = Biblioxml::BibleTree.new(translation: doc.root["translation"], status: doc.root["status"], link: doc.root["link"])
       doc.root.xpath("testament").each do |testament_node|
         testament = Biblioxml::TestamentNode.new(name: testament_node["name"])
         bible_tree.add_testament(testament)

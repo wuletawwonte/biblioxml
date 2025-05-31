@@ -72,6 +72,7 @@ GEM
     unicode-display_width (3.1.4)
       unicode-emoji (~> 4.0, >= 4.0.4)
     unicode-emoji (4.0.4)
+    zeitwerk (2.7.3)
 
 PLATFORMS
   aarch64-linux-gnu
@@ -89,6 +90,7 @@ DEPENDENCIES
   nokogiri (~> 1.18)
   rake (~> 13.0)
   rubocop (~> 1.21)
+  zeitwerk (~> 2.7)
 
 BUNDLED WITH
    2.6.9
