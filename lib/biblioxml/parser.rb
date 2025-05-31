@@ -12,7 +12,8 @@ module Biblioxml
     def self.read(file_path)
       doc = Nokogiri::XML(File.read(file_path))
 
-      bible_tree = Biblioxml::BibleTree.new(translation: doc.root["translation"], status: doc.root["status"], link: doc.root["link"])
+      bible_tree = Biblioxml::BibleTree.new(translation: doc.root["translation"], status: doc.root["status"],
+                                            link: doc.root["link"])
       doc.root.xpath("testament").each do |testament_node|
         testament = Biblioxml::TestamentNode.new(name: testament_node["name"])
         bible_tree.add_testament(testament)
@@ -29,7 +30,7 @@ module Biblioxml
           end
         end
       end
-      
+
       bible_tree
     end
   end

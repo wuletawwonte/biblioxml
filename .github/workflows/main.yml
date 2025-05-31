@@ -25,3 +25,21 @@ jobs:
           bundler-cache: true
       - name: Run the default task
         run: bundle exec rake
+  rubocop:
+    runs-on: ubuntu-latest
+    name: Run RuboCop
+    strategy:
+      matrix:
+        ruby:
+          - "3.3.4"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+
+      - name: Run RuboCop
+        run: bundle exec rubocop --parallel
