@@ -7,6 +7,7 @@ Gem::Specification.new do |spec|
   spec.version = Biblioxml::VERSION
   spec.authors = ["Wuletaw Wonte"]
   spec.email = ["wuletawwonte@gmail.com"]
+  spec.license = "MIT"
 
   spec.summary = "Convert bible xml file standards."
   spec.description = "Convert bible xml file standard from a custom one to Zefania and OSIS standards."
@@ -29,5 +30,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Uncomment to register a new dependency of your gem
-  # spec.add_dependency "example-gem", "~> 1.0"
+  spec.add_dependency "nokogiri", "~> 1.18"
+  spec.add_dependency "zeitwerk", "~> 2.7"
 end

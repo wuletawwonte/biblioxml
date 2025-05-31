@@ -1,8 +1,37 @@
 AllCops:
   TargetRubyVersion: 3.1
+  SuggestExtensions: false
+  Exclude:
+    - "bin/**/*"
+    - "vendor/**/*"
+    - "tmp/**/*"
+    - "Gemfile"
+    - "Rakefile"
+Bundler:
+  Enabled: false
+Gemspec:
+  Enabled: false
+Layout:
+  Enabled: false
+Lint:
+  Enabled: false
+Metrics:
+  Enabled: false
+Naming:
+  Enabled: false
+Security:
+  Enabled: false
+Style:
+  Enabled: false
 
 Style/StringLiterals:
+  Enabled: true
   EnforcedStyle: double_quotes
 
 Style/StringLiteralsInInterpolation:
+  Enabled: true
   EnforcedStyle: double_quotes
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+  EnforcedStyle: always
