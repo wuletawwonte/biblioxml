@@ -1,15 +1,19 @@
-class TestamentNode
-  TESTAMENTS = %w[old new].freeze
+# frozen_string_literal: true
 
-  attr_reader :books
-  attr_accessor :name
+module Biblioxml
+  class TestamentNode
+    TESTAMENTS = %w[old new].freeze
 
-  def initialize(name: "new")
-    @name = name
-    @books = []
-  end
+    attr_reader :books
+    attr_accessor :name
 
-  def add_book(book)
-    @books << book
+    def initialize(name: "new")
+      @name = name
+      @books = []
+    end
+
+    def add_book(book)
+      @books << book
+    end
   end
 end
