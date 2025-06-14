@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Biblioxml
+module Models
   class VerseNode
     attr_accessor :number, :text
 

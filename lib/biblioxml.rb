@@ -9,7 +9,18 @@ loader.setup
 
 module Biblioxml
   def self.parse(file_path)
-    parser = Parser.new(file_path)
-    parser.read
+    file_reader = Biblioxml::Reader.new(file_path)
+    file_reader.read
   end
+
+  def self.convert(bible_xml)
+    to_zephaniah = Biblioxml::ToZephaniah.new(bible_xml)
+    to_zephaniah.convert
+  end
+end
+
+if __FILE__ == $0
+  bible_xml = Biblioxml.parse("tmp/AmharicGamo2017Bible.xml")
+  puts Biblioxml.convert(bible_xml)
+  # converted_xml
 end

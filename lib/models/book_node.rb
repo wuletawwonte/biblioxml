@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Biblioxml
+module Models
   class BookNode
     attr_reader :chapters
     attr_accessor :name

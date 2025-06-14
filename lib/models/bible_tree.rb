@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Biblioxml
+module Models
   class BibleTree
     attr_reader :testaments
     attr_accessor :translation, :status, :link

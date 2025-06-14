@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Biblioxml
+module Models
   class TestamentNode
     TESTAMENTS = %w[old new].freeze
 
