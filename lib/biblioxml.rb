@@ -15,12 +15,9 @@ module Biblioxml
 
   def self.convert(bible_xml)
     to_zephaniah = Biblioxml::ToZephaniah.new(bible_xml)
-    to_zephaniah.convert
+    to_zephaniah.transform
   end
 end
 
-if __FILE__ == $0
-  bible_xml = Biblioxml.parse("tmp/AmharicGamo2017Bible.xml")
-  puts Biblioxml.convert(bible_xml)
-  # converted_xml
-end
+bible_xml = Biblioxml.parse("tmp/AmharicGamo2017Bible.xml")
+puts Biblioxml.convert(bible_xml)
