@@ -20,4 +20,5 @@ module Biblioxml
 end
 
 bible_xml = Biblioxml.parse("tmp/WolayttaBible.xml")
-puts Biblioxml.convert(bible_xml)
+content = Biblioxml.convert(bible_xml)
+Biblioxml::Writer.write_to_file("tmp/WolayttaBible.zefania.xml", content)
