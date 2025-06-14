@@ -15,7 +15,7 @@ module Biblioxml
 
   def self.convert(bible_xml)
     to_zephaniah = Biblioxml::ToZephaniah.new(bible_xml)
-    to_zephaniah.transform
+    to_zephaniah.convert
   end
 end
 
