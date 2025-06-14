@@ -2,7 +2,7 @@
 
 module Biblioxml
   module Books
-    BOOKS_BY_NUMBER = {
+    BOOKS = {
       1  => { bname: "Genesis",         bsname: "Gen" },
       2  => { bname: "Exodus",          bsname: "Exod" },
       3  => { bname: "Leviticus",       bsname: "Lev" },
@@ -70,6 +70,5 @@ module Biblioxml
       65 => { bname: "Jude",            bsname: "Jude" },
       66 => { bname: "Revelation",      bsname: "Rev" }
     }.freeze
-
   end
 end
