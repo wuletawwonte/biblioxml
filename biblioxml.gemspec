@@ -26,10 +26,11 @@ Gem::Specification.new do |spec|
     end
   end
   spec.bindir = "bin"
-  spec.executables = spec.files.grep(%r{\Abin/}) { |f| File.basename(f) }
+  spec.executables = ["biblioxml"]
   spec.require_paths = ["lib"]
 
   # Uncomment to register a new dependency of your gem
   spec.add_dependency "nokogiri", "~> 1.18"
   spec.add_dependency "zeitwerk", "~> 2.7"
+  spec.add_dependency "thor", "~> 1.3"
 end

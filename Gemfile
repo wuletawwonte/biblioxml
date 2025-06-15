@@ -13,3 +13,5 @@ gem "rubocop", "~> 1.21"
 gem "nokogiri", "~> 1.18"
 
 gem "zeitwerk", "~> 2.7"
+
+gem "thor", "~> 1.3"

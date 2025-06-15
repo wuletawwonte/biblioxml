@@ -12,7 +12,7 @@ module Biblioxml
       end
 
       def write(file_path, content)
-        File.open(file_path, 'w') do |file|
+        File.open(file_path, "w") do |file|
           file.write(content)
         end
       end
